@@ -1,0 +1,33 @@
+@import "./bootstrap.min.css";
+@import "./bootstrap-icons/font/bootstrap-icons.css";
+@import "./animate.css";
+
+
+.form-control:focus{
+    box-shadow: none;
+    border: none;
+}
+
+.menu-icon:hover .menu{
+    transform: scale(1);
+}
+.menu{
+    position: absolute;
+    background-color: var(--bs-white);
+    transform: scale(0);
+    transition: 0.5s;
+}
+.menu i:hover{
+    background-color: #e7e7e788;
+    border-radius: 30px;
+}
+.done{
+    text-decoration-line: line-through;
+}
+
+.created{
+    animation: 0.5s fadeInDown;
+}
+.deleted{
+    animation: 0.5s zoomOut;
+}

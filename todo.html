@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/todo.css">
+    <title>todo</title>
+</head>
+<body>
+    <div class="container-fluid" id="app">
+        <div class="row bg-primary vh-100 justify-content-center align-items-center">
+            <div class="col-12 col-md-6">
+                <div class="bg-white p-5 rounded">
+                   <div class="d-flex justify-content-between align-items-start">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Todo List</li>
+                        </ol>
+                    </nav>
+                    <img src="./images/icon-todo.svg" alt="">
+                   </div>
+                      
+                    <div class="input d-flex align-items-center border-primary border mt-3 rounded-pill p-2 ">
+                        <i class="bi bi-bar-chart-steps ms-3"></i>
+                       <input type="text" class="form-control border-0 text-capitalize" @keyup.enter="create()"  v-model="message" name="keyword" placeholder="make something">
+                    </div>
+                    <div class="d-flex justify-content-between mt-2">
+                        <p class="mb-0 fw-bold">Job List{{ lists.length > 0 ? "s" : "" }}</p>
+                        <p v-if="lists.length>0 && doneTotal == lists.length" class="badge bg-success rounded-pill">
+                            All Done <i class="bi bi-check-circle-fill"></i>
+                        </p>
+                        <p v-else class="badge bg-primary rounded-pill">
+                            Done {{doneTotal}}
+                        </p>
+                    </div>
+                    <ul class="mt-2 list-group">
+                        <li v-if="lists.length === 0" class="text-center list-group-item">
+                            There is no nothing
+                        </li>
+                        <li v-else v-for="list in lists" :key="list.id" :class="['border border-primary mb-2 d-flex align-items-center justify-content-between p-2 rounded created']" >
+                            <input v-if="list.isEdit" type="text" v-model="list.message" class="text-capitalize form-control" @keyup.enter="list.isEdit = false">
+                            <div v-else class="d-flex align-items-center ">
+                                <input type="checkbox" v-model="list.isDone" class="form-check-input mt-0" id="list.id">
+                                <p :class="['mb-0 ms-2 text-capitalize',{'done':list.isDone}]">{{list.message}}</p>
+                            </div>
+                            <div class="menu-icon">
+                                <i class="bi bi-three-dots-vertical menu-dot" ></i>
+                                <div class="menu shadow py-3 px-2 rounded">
+                                    <i class="bi bi-trash text-warning d-block px-3 py-1 mb-2" @click="list.isEdit = true"> Edit</i>
+                                    <i class="bi bi-trash text-danger px-3 py-2" @click="[list.isDelete= true,del(list.id)]"> Delete</i>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script src="./js/todo.js" ></script>
+</body>
+</html>

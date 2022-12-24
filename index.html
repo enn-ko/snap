@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Snap</title>
+ 
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+<body>
+
+        <div class="container-fluid">
+          <div class="row ">
+            <div class="col-12">
+              <nav class="navbar navbar-expand-lg text-dark navbar-light bg-white shadow mb-5">
+                <div class="container-fluid">
+                  <a class="navbar-brand fs-2 fw-bold" href="#">Snap</a>
+                  <button class="d-block d-lg-none btn btn-outline-primary " >
+                    <img src="./images/icon-menu.svg" class="menu-icon p-2 text-white" style="height: 30px;" alt="">
+                   </button>
+                  <div class="menu-nav navbar-collapse  d-none d-lg-block" >
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Features
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarDropdown">
+                          <li>
+                            <img src="./images/icon-todo.svg" alt="">
+                            <a class="dropdown-item" href="todo.html">Todo List</a>
+                          </li>
+                          <li>
+                            <img src="./images/icon-calendar.svg" alt="">
+                            <a class="dropdown-item" href="calender.html">Calender</a>
+                          </li>
+                          <li>
+                            <img src="./images/icon-reminders.svg" alt="">
+                            <a class="dropdown-item" href="remainder.html">Reminders</a>
+                          </li>
+                          <li>
+                            <img src="./images/icon-planning.svg" alt="">
+                            <a class="dropdown-item" href="#">Planning</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Company
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">History</a></li>
+                          <li><a class="dropdown-item" href="#">Our Team</a></li>
+                          <li><a class="dropdown-item" href="#">Blog</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " href="#">Careers</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " href="#">About</a>
+                      </li>
+                    </ul>
+                   <div class="sign d-lg-flex ">
+                    <button id="login" class="ms-5 me-lg-2 text-center btn btn-outline-dark px-4 py-2 rounded-pill">
+                      Login
+                    </button>
+                    <button id="reg" class="btn btn-outline-dark px-4 py-2 rounded-pill " >
+                      Register
+                    </button>
+                  </div>
+                  </div>
+                </div>
+              </nav>
+             
+             
+          <div class="row vh-100 justify-content-evenly ">
+            <div class="right d-block d-lg-none mb-5">
+              <img src="./images/image-hero-mobile.png" class="w-100" style="height: 450px;" alt="">
+            </div>
+            <div id="left" class="m-auto col-10 col-lg-5 ">
+              <div class="header">
+               <div class="mb-3 mb-lg-5">
+                <h1 class="fw-bold mb-0" style="font-size: 58px;">Make</h1>
+                <h1 class="fw-bold" style="font-size: 58px;">remote work</h1>
+               </div>
+                <p class="text-black-50 mb-3 mb-lg-5 " style="width: 80%;">
+                  Get your team in sync, no matter your location.
+                  Streamline processes, create team rituals, and 
+                  watch productivity soar.
+                </p>
+                <button id="learn-more" class="btn btn-outline-dark btn-lg py-2 px-4 rounded-pill  mb-lg-5">
+                  Learn more
+                </button>
+              </div>
+              <footer class="w-75 mt-5 footer d-flex justify-content-between mb-5 md-lg-0 ms-0">
+                <img src="./images/client-databiz.svg"  alt="">
+                <img src="./images/client-audiophile.svg"  alt="">
+                <img src="./images/client-meet.svg"  alt="">
+                <img src="./images/client-maker.svg"  alt="">
+              </footer>
+            </div>
+            <div class="right col-12 col-lg-5 d-none d-lg-block">
+              <img src="./images/image-hero-desktop.png" class="right-img" style="height: 500px;" alt="">
+            </div>
+          </div>
+            </div>
+          </div>
+        </div>
+ 
+    <script src="./js/jquery/dist/jquery.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/app.js"></script> 
+</body>
+</html>
